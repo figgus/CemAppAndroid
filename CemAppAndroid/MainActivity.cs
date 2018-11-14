@@ -12,15 +12,22 @@ namespace CemAppAndroid
     public class MainActivity : AppCompatActivity, BottomNavigationView.IOnNavigationItemSelectedListener
     {
         TextView textMessage;
-
+        Button btnUsuarios;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
 
             textMessage = FindViewById<TextView>(Resource.Id.message);
-            BottomNavigationView navigation = FindViewById<BottomNavigationView>(Resource.Id.navigation);
-            navigation.SetOnNavigationItemSelectedListener(this);
+            //BottomNavigationView navigation = FindViewById<BottomNavigationView>(Resource.Id.navigation);
+            //navigation.SetOnNavigationItemSelectedListener(this);
+            btnUsuarios = FindViewById<Button>(Resource.Id.btnUsuarios);
+            btnUsuarios.Click += BtnUsuarios_Click;
+        }
+
+        private void BtnUsuarios_Click(object sender, System.EventArgs e)
+        {
+            
         }
 
         public bool OnNavigationItemSelected(IMenuItem item)

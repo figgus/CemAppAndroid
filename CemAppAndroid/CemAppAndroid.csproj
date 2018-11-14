@@ -61,6 +61,7 @@
     <Compile Include="Clases\UsuariosApi.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="PanelUsuarios.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -110,6 +111,16 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Loginlayout1.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\layoutPanelUsuarios.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\row.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

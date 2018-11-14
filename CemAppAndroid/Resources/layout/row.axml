@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+	android:background="#ff8abdc3"
+    android:layout_height="150dp">
+	<TextView
+		android:text="Nombre de usuario: "
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textStyle="bold"
+		android:textColor="#ff1e8f9c"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:id="@+id/txtUsername" />
+	<TextView
+		android:text="Password: "
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textStyle="bold"
+		android:textColor="#ff1e8f9c"
+		android:id="@+id/txtPassword" />
+	<TextView
+		android:text="Email: "
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textStyle="bold"
+		android:textColor="#ff1e8f9c"
+		android:id="@+id/txtEmail" />
+	<TextView
+		android:text="Celular: "
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textStyle="bold"
+		android:textColor="#ff1e8f9c"
+		android:id="@+id/txtCelular" />
+	<View
+android:layout_width="fill_parent"
+android:layout_weight="2"
+android:layout_height="0.5dip"
+android:layout_marginTop="0.5dp"
+android:background="#E6E6E6"/>
+
+</LinearLayout>

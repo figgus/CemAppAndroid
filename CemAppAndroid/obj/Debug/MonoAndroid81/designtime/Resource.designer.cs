@@ -2396,8 +2396,8 @@ namespace CemAppAndroid
 			// aapt resource value: 0x7F0C0018
 			public const int auto = 2131492888;
 			
-			// aapt resource value: 0x7F020010
-			public const int barra = 2130837520;
+			// aapt resource value: 0x7F020012
+			public const int barra = 2130837522;
 			
 			// aapt resource value: 0x7F0C0007
 			public const int blocking = 2131492871;
@@ -2405,8 +2405,17 @@ namespace CemAppAndroid
 			// aapt resource value: 0x7F0C001A
 			public const int bottom = 2131492890;
 			
-			// aapt resource value: 0x7F020009
-			public const int btnIngresar = 2130837513;
+			// aapt resource value: 0x7F020011
+			public const int btnIngresar = 2130837521;
+			
+			// aapt resource value: 0x7F020003
+			public const int btnUsuarios = 2130837507;
+			
+			// aapt resource value: 0x7F020005
+			public const int button2 = 2130837509;
+			
+			// aapt resource value: 0x7F020006
+			public const int button3 = 2130837510;
 			
 			// aapt resource value: 0x7F0C001B
 			public const int buttonPanel = 2131492891;
@@ -2423,8 +2432,8 @@ namespace CemAppAndroid
 			// aapt resource value: 0x7F0C0008
 			public const int chronometer = 2131492872;
 			
-			// aapt resource value: 0x7F020002
-			public const int container = 2130837506;
+			// aapt resource value: 0x7F0C0020
+			public const int container = 2131492896;
 			
 			// aapt resource value: 0x7F0C0021
 			public const int contentPanel = 2131492897;
@@ -2531,8 +2540,8 @@ namespace CemAppAndroid
 			// aapt resource value: 0x7F0C0043
 			public const int media_actions = 2131492931;
 			
-			// aapt resource value: 0x7F020003
-			public const int message = 2130837507;
+			// aapt resource value: 0x7F0C0044
+			public const int message = 2131492932;
 			
 			// aapt resource value: 0x7F0C0045
 			public const int mini = 2131492933;
@@ -2540,20 +2549,17 @@ namespace CemAppAndroid
 			// aapt resource value: 0x7F0C0046
 			public const int multiply = 2131492934;
 			
-			// aapt resource value: 0x7F020004
-			public const int navigation = 2130837508;
-			
-			// aapt resource value: 0x7F020012
-			public const int navigation_dashboard = 2130837522;
+			// aapt resource value: 0x7F020016
+			public const int navigation_dashboard = 2130837526;
 			
 			// aapt resource value: 0x7F0C0047
 			public const int navigation_header_container = 2131492935;
 			
-			// aapt resource value: 0x7F020011
-			public const int navigation_home = 2130837521;
+			// aapt resource value: 0x7F020015
+			public const int navigation_home = 2130837525;
 			
-			// aapt resource value: 0x7F020013
-			public const int navigation_notifications = 2130837523;
+			// aapt resource value: 0x7F020017
+			public const int navigation_notifications = 2130837527;
 			
 			// aapt resource value: 0x7F0C0048
 			public const int none = 2131492936;
@@ -2590,6 +2596,9 @@ namespace CemAppAndroid
 			
 			// aapt resource value: 0x7F0C0053
 			public const int radio = 2131492947;
+			
+			// aapt resource value: 0x7F020007
+			public const int recycler = 2130837511;
 			
 			// aapt resource value: 0x7F0C0054
 			public const int right = 2131492948;
@@ -2720,6 +2729,9 @@ namespace CemAppAndroid
 			// aapt resource value: 0x7F0C007C
 			public const int textSpacerNoTitle = 2131492988;
 			
+			// aapt resource value: 0x7F020004
+			public const int textView1 = 2130837508;
+			
 			// aapt resource value: 0x7F0C007D
 			public const int text_input_password_toggle = 2131492989;
 			
@@ -2759,17 +2771,23 @@ namespace CemAppAndroid
 			// aapt resource value: 0x7F0C008B
 			public const int transition_transform = 2131493003;
 			
+			// aapt resource value: 0x7F020014
+			public const int txtCelular = 2130837524;
+			
+			// aapt resource value: 0x7F020013
+			public const int txtEmail = 2130837523;
+			
+			// aapt resource value: 0x7F020010
+			public const int txtPassword = 2130837520;
+			
+			// aapt resource value: 0x7F020002
+			public const int txtTexto1 = 2130837506;
+			
+			// aapt resource value: 0x7F020009
+			public const int txtTexto2 = 2130837513;
+			
 			// aapt resource value: 0x7F020008
-			public const int txtPassword = 2130837512;
-			
-			// aapt resource value: 0x7F020005
-			public const int txtTexto1 = 2130837509;
-			
-			// aapt resource value: 0x7F020007
-			public const int txtTexto2 = 2130837511;
-			
-			// aapt resource value: 0x7F020006
-			public const int txtUsername = 2130837510;
+			public const int txtUsername = 2130837512;
 			
 			// aapt resource value: 0x7F0C008C
 			public const int uniform = 2131493004;
@@ -2966,7 +2984,10 @@ namespace CemAppAndroid
 			public const int design_text_input_password_icon = 2131689512;
 			
 			// aapt resource value: 0x7F030003
-			public const int Loginlayout1 = 2130903043;
+			public const int layoutPanelUsuarios = 2130903043;
+			
+			// aapt resource value: 0x7F030004
+			public const int Loginlayout1 = 2130903044;
 			
 			// aapt resource value: 0x7F0F0001
 			public const int notification_action = 2131689473;
@@ -3012,6 +3033,9 @@ namespace CemAppAndroid
 			
 			// aapt resource value: 0x7F0F0006
 			public const int notification_template_part_time = 2131689478;
+			
+			// aapt resource value: 0x7F030005
+			public const int row = 2130903045;
 			
 			// aapt resource value: 0x7F0F0038
 			public const int select_dialog_item_material = 2131689528;

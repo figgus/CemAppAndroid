@@ -59,7 +59,8 @@ namespace CemAppAndroid
             }
             if (res)
             {
-                Intent intent = new Intent(this, typeof(MainActivity));
+                Intent intent = new Intent(this, typeof(PanelUsuarios));
+                intent.PutExtra("Usuarios", JsonConvert.SerializeObject(datos));
                 StartActivity(intent);
             }
             else
