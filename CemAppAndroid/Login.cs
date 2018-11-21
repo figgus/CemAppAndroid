@@ -54,12 +54,14 @@ namespace CemAppAndroid
             {
                 if (user.username == txtUsername.Text && user.password == txtPass.Text)
                 {
+
                     res = true;
                 }
             }
             if (res)
             {
-                Intent intent = new Intent(this, typeof(PanelUsuarios));
+                this.GuardarUsuariosPropiedades(datos);
+                Intent intent = new Intent(this, typeof(MainActivity));
                 intent.PutExtra("Usuarios", JsonConvert.SerializeObject(datos));
                 StartActivity(intent);
             }
@@ -71,6 +73,15 @@ namespace CemAppAndroid
             }
 
 
+        }
+
+
+        public void GuardarUsuariosPropiedades(List<Usuario> datos)
+        {
+            var users = Application.Context.GetSharedPreferences("Usuarios", FileCreationMode.Private);
+            var editarUsers = users.Edit();
+            editarUsers.PutString("ListaUsuarios", JsonConvert.SerializeObject(datos));
+            editarUsers.Commit();
         }
     }
 }

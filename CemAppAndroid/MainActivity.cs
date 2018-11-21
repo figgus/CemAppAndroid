@@ -1,10 +1,14 @@
 ﻿using Android.App;
+using Android.Content;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.Design.Widget;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using CemAppAndroid.Clases.ClasesModelo;
+using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace CemAppAndroid
 {
@@ -13,21 +17,22 @@ namespace CemAppAndroid
     {
         TextView textMessage;
         Button btnUsuarios;
+        private List<Usuario> lista;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
-
+            lista = JsonConvert.DeserializeObject<List<Usuario>>(Intent.GetStringExtra("Usuarios"));
             textMessage = FindViewById<TextView>(Resource.Id.message);
-            //BottomNavigationView navigation = FindViewById<BottomNavigationView>(Resource.Id.navigation);
-            //navigation.SetOnNavigationItemSelectedListener(this);
             btnUsuarios = FindViewById<Button>(Resource.Id.btnUsuarios);
             btnUsuarios.Click += BtnUsuarios_Click;
         }
 
         private void BtnUsuarios_Click(object sender, System.EventArgs e)
         {
-            
+            Intent intent = new Intent(this, typeof(PanelUsuarios));
+            intent.PutExtra("Usuarios", JsonConvert.SerializeObject(lista));
+            StartActivity(intent);
         }
 
         public bool OnNavigationItemSelected(IMenuItem item)

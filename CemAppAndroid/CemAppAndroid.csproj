@@ -58,7 +58,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\ClasesModelo\Usuario.cs" />
+    <Compile Include="Clases\Propiedades.cs" />
     <Compile Include="Clases\UsuariosApi.cs" />
+    <Compile Include="DetallesUsuario.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="PanelUsuarios.cs" />
@@ -121,6 +123,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\row.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\DetallesUsuariosLayout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

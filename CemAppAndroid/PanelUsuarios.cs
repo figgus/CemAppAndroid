@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
+using CemAppAndroid.Clases;
 using CemAppAndroid.Clases.ClasesModelo;
 using Newtonsoft.Json;
 
@@ -29,12 +30,27 @@ namespace CemAppAndroid
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.layoutPanelUsuarios);
-            lista= JsonConvert.DeserializeObject<List<Usuario>>(Intent.GetStringExtra("Usuarios"));
+            string obj = Intent.GetStringExtra("Usuarios");
+            CargarUsers();
             mLayoutManager = new LinearLayoutManager(this);
             mRecyclerView = FindViewById<RecyclerView>(Resource.Id.recycler);
             mRecyclerView.SetLayoutManager(mLayoutManager);
+            
+        }
+        public async void CargarUsers()
+        {
+            UsuariosApi api = new UsuariosApi();
+            await api.TraerTodo();
+            lista = api.listaUsuarios;
             mAdapter = new RecyclerAdapter(lista);
             mRecyclerView.SetAdapter(mAdapter);
+        }
+        
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            return base.OnOptionsItemSelected(item);
+            
         }
 
 
@@ -54,13 +70,23 @@ namespace CemAppAndroid
                 public TextView txtPassword { get; set; }
                 public TextView txtEmail { get; set; }
                 public TextView txtCelular { get; set; }
+                public int idUsuario { get; set; }
 
                 public MyView(View view) : base(view)
                 {
                     mMainView = view;
+                    view.Click += View_Click;
+                }
+
+                private void View_Click(object sender, EventArgs e)
+                {
+                    Intent intent = new Intent(Android.App.Application.Context, typeof(DetallesUsuario));
+                    intent.PutExtra("UserSelected", idUsuario);
+                    Android.App.Application.Context.StartActivity(intent);
                 }
             }
 
+            
             
 
             public override int ItemCount { get { return lista.Count; } }
@@ -71,10 +97,14 @@ namespace CemAppAndroid
                 myHolder.txtPassword.Text = myHolder.txtPassword.Text + lista[position].password;
                 myHolder.txtEmail.Text = myHolder.txtEmail.Text + lista[position].email;
                 myHolder.txtCelular.Text = myHolder.txtCelular.Text + lista[position].fonoCelular;
+                myHolder.idUsuario = lista[position].idUsuario;
             }
+
+            
 
             public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
             {
+                
                 View row = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.row,parent,false);
                 TextView txtUsername = row.FindViewById<TextView>(Resource.Id.txtUsername);
                 TextView txtPassword = row.FindViewById<TextView>(Resource.Id.txtPassword);
@@ -82,8 +112,9 @@ namespace CemAppAndroid
                 TextView txtCelular = row.FindViewById<TextView>(Resource.Id.txtCelular);
                 MyView view = new MyView(row) { txtUsername=txtUsername,txtPassword=txtPassword,txtEmail=txtEmail,txtCelular=txtCelular };
                 return view;
-
             }
+
+
         }
 
 

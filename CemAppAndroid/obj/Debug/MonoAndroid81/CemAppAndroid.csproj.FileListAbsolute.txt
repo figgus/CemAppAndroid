@@ -77,4 +77,5 @@ C:\Users\joaquin\source\repos\CemAppAndroid\CemAppAndroid\obj\Debug\MonoAndroid8
 C:\Users\joaquin\source\repos\CemAppAndroid\CemAppAndroid\obj\Debug\MonoAndroid81\linksrc\System.Xml.Linq.pdb
 C:\Users\joaquin\source\repos\CemAppAndroid\CemAppAndroid\obj\Debug\MonoAndroid81\linksrc\Mono.Security.pdb
 C:\Users\joaquin\source\repos\CemAppAndroid\CemAppAndroid\obj\Debug\MonoAndroid81\android\assets\CemAppAndroid.pdb
+C:\Users\joaquin\source\repos\CemAppAndroid\CemAppAndroid\obj\Debug\MonoAndroid81\res\layout\detallesusuarioslayout.xml
 C:\Users\joaquin\source\repos\CemAppAndroid\CemAppAndroid\obj\Debug\MonoAndroid81\linksrc\CemAppAndroid.pdb
